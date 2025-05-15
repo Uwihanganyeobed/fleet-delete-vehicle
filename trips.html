@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management System - Trip History</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Details for Vehicle vr-001</h1>
+            <div class="admin-info">
+                <div class="notification">3</div>
+                <div class="admin-avatar"></div>
+                <span>Admin Name</span>
+            </div>
+        </div>
+
+        <div class="tab-container">
+            <div class="tabs">
+                <a href="index.html" class="tab">Vehicle Info</a>
+                <a href="trips.html" class="tab active">Trip History</a>
+                <a href="drivers.html" class="tab">Drivers</a>
+            </div>
+
+            <!-- Trip History Tab -->
+            <div id="trips" class="tab-content active">
+                <div class="section-title">Trip History</div>
+                <div class="filters">
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label class="filter-label">From Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">To Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Driver</label>
+                            <select>
+                                <option value="">All Drivers</option>
+                                <option value="john">John Smith</option>
+                                <option value="jane">Jane Doe</option>
+                                <option value="robert">Robert Johnson</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Trip Status</label>
+                            <select>
+                                <option value="">All Status</option>
+                                <option value="completed">Completed</option>
+                                <option value="ongoing">Ongoing</option>
+                                <option value="scheduled">Scheduled</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="btn btn-outline">Reset</button>
+                        <button class="btn btn-primary">Apply Filters</button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Trip ID</th>
+                            <th>Date</th>
+                            <th>Driver</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Start Odometer</th>
+                            <th>End Odometer</th>
+                            <th>Distance</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>T-10023</td>
+                            <td>15/05/2025</td>
+                            <td>John Smith</td>
+                            <td>Office HQ</td>
+                            <td>Client Site A</td>
+                            <td>670 km</td>
+                            <td>700 km</td>
+                            <td>30 km</td>
+                            <td><span class="status-tag status-available">Completed</span></td>
+                            <td>
+                                <span class="action-btn view-btn">View</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>T-10022</td>
+                            <td>10/05/2025</td>
+                            <td>Jane Doe</td>
+                            <td>Office HQ</td>
+                            <td>Distribution Center</td>
+                            <td>620 km</td>
+                            <td>670 km</td>
+                            <td>50 km</td>
+                            <td><span class="status-tag status-available">Completed</span></td>
+                            <td>
+                                <span class="action-btn view-btn">View</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>T-10021</td>
+                            <td>05/05/2025</td>
+                            <td>Robert Johnson</td>
+                            <td>Office HQ</td>
+                            <td>Airport</td>
+                            <td>590 km</td>
+                            <td>620 km</td>
+                            <td>30 km</td>
+                            <td><span class="status-tag status-available">Completed</span></td>
+                            <td>
+                                <span class="action-btn view-btn">View</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>T-10024</td>
+                            <td>20/05/2025</td>
+                            <td>Michael Brown</td>
+                            <td>Office HQ</td>
+                            <td>Client Site B</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><span class="status-tag status-inuse">Scheduled</span></td>
+                            <td>
+                                <span class="action-btn view-btn">View</span>
+                                <span class="action-btn edit-btn">Edit</span>
+                                <span class="action-btn delete-btn">Cancel</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination">
+                    <div class="pagination-info">Showing 1 to 4 of 20 entries</div>
+                    <div class="pagination-controls">
+                        <div class="page-btn">«</div>
+                        <div class="page-btn active">1</div>
+                        <div class="page-btn">2</div>
+                        <div class="page-btn">3</div>
+                        <div class="page-btn">»</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

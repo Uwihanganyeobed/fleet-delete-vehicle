@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management System - Drivers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Details for Vehicle vr-001</h1>
+            <div class="admin-info">
+                <div class="notification">3</div>
+                <div class="admin-avatar"></div>
+                <span>Admin Name</span>
+            </div>
+        </div>
+
+        <div class="tab-container">
+            <div class="tabs">
+                <a href="index.html" class="tab">Vehicle Info</a>
+                <a href="trips.html" class="tab">Trip History</a>
+                <a href="drivers.html" class="tab active">Drivers</a>
+            </div>
+
+            <!-- Drivers Tab -->
+            <div id="drivers" class="tab-content active">
+                <div class="section-title">Vehicle Drivers</div>
+                <div class="filters">
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label class="filter-label">Driver Name</label>
+                            <input type="text" placeholder="Enter driver name">
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">License Type</label>
+                            <select>
+                                <option value="">All Types</option>
+                                <option value="a">Class A</option>
+                                <option value="b">Class B</option>
+                                <option value="c">Class C</option>
+                                <option value="d">Class D</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Status</label>
+                            <select>
+                                <option value="">All Status</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="onleave">On Leave</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Experience</label>
+                            <select>
+                                <option value="">All Experience</option>
+                                <option value="novice">0-2 years</option>
+                                <option value="intermediate">3-5 years</option>
+                                <option value="experienced">5+ years</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="btn btn-outline">Reset</button>
+                        <button class="btn btn-primary">Apply Filters</button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Driver ID</th>
+                            <th>Full Name</th>
+                            <th>License Number</th>
+                            <th>License Type</th>
+                            <th>Experience</th>
+                            <th>Total Trips</th>
+                            <th>Total Distance</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>D-001</td>
+                            <td>John Smith</td>
+                            <td>DL-12345</td>
+                            <td>Class B</td>
+                            <td>7 years</td>
+                            <td>156</td>
+                            <td>12,450 km</td>
+                            <td><span class="status-tag status-available">Active</span></td>
+                            <td>
+                                <span class="action-btn view-btn">View</span>
+                                <span class="action-btn edit-btn">Edit</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>D-002</td>
+                            <td>Jane Doe</td>
+                            <td>DL-23456</td>
+                            <td>Class C</td>
+                            <td>4 years</td>
+                            <td>87</td>
+                            <td>8,230 km</td>
+                            <td><span class="status-tag status-available">Active</span></td>
+                            <td>
+                                <span class="action-btn view-btn">View</span>
+                                <span class="action-btn edit-btn">Edit</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>D-003</td>
+                            <td>Robert Johnson</td>
+                            <td>DL-34567</td>
+                            <td>Class B</td>
+                            <td>6 years</td>
+                            <td>112</td>
+                            <td>10,380 km</td>
+                            <td><span class="status-tag status-inuse">On Leave</span></td>
+                            <td>
+                                <span class="action-btn view-btn">View</span>
+                                <span class="action-btn edit-btn">Edit</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>D-004</td>
+                            <td>Michael Brown</td>
+                            <td>DL-45678</td>
+                            <td>Class A</td>
+                            <td>10 years</td>
+                            <td>203</td>
+                            <td>18,750 km</td>
+                            <td><span class="status-tag status-available">Active</span></td>
+                            <td>
+                                <span class="action-btn view-btn">View</span>
+                                <span class="action-btn edit-btn">Edit</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination">
+                    <div class="pagination-info">Showing 1 to 4 of 10 entries</div>
+                    <div class="pagination-controls">
+                        <div class="page-btn">«</div>
+                        <div class="page-btn active">1</div>
+                        <div class="page-btn">2</div>
+                        <div class="page-btn">3</div>
+                        <div class="page-btn">»</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
